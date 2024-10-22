@@ -5,7 +5,7 @@ let c = 0;
 
 //PARA ESCONDER ÁREA DE BOTÃO
 let idWhatsapp = document.getElementById('whatsapp');
-idWhatsapp.style.display = "none";
+//idWhatsapp.style.display = "none";
 
 
 function execucao(){ 
@@ -18,5 +18,5 @@ function execucao(){
     c++;
 }
 
-
+//
 
