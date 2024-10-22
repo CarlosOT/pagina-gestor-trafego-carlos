@@ -57,7 +57,7 @@ body{
     margin-right: 60px;
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 30px;
 
 }#bordaPrincipal{
     margin: auto;
@@ -72,6 +72,7 @@ body{
     border-color: rgb(0, 191, 255);
     border-radius: 100px;
     margin-top: 15px;
+    box-shadow: 1px 1px 10px rgb(0, 191, 255);
 
 }#imgWhats{
     padding-top: 10px;
