@@ -1,6 +1,7 @@
-function pegaNome(){
+let nome = [];
+function pegaNome(){ 
     let inputPrincipal = document.getElementById('inputPrincipal');
-    let nome = inputPrincipal.value;
-
+    nome.push(inputPrincipal.value);
+    
 }
 
