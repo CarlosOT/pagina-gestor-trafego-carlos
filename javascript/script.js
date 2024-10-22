@@ -1,6 +1,12 @@
+//VETOR
 let nome = [];
 let listaPlaceHolders = ["DIGITE SEU SEGUNDO NOME AQUI","FUNCIONOU"];
 let c = 0;
+
+//PARA ESCONDER ÁREA DE BOTÃO
+let idWhatsapp = document.getElementById('whatsapp');
+let escondeWhatsapp = idWhatsapp.innerHTML = '';
+
 
 function execucao(){ 
     let inputPrincipal = document.getElementById('inputPrincipal');
