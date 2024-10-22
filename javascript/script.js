@@ -18,5 +18,16 @@ function execucao(){
     c++;
 }
 
-//
+//QUAIS SÃO AS INFORMAÇÕES ESSENCIAIS QUE PRECISO DE UM CLIENTE QUE ESTÁ PROCURANDO POR UM GESTOR DE TRÁFEGO?
+/*
+NOME
+PALAVRA CHAVE PRINCIPAL (SERVIÇO)
+AREA
+TEM CONTA NO GOOGLE ADS?
+TEM CAMPANHAS ATIVAS?
+JÁ TRABALHOU COM ALGUM GESTOR DE TRÁFEGO?
+
+
+Oi Carlos, meu nome é ${NOME}. Eu sou da area de ${AREA}, desejo contratar um gestor de tráfego para vender no google meu principal serviço, que é ${SERVIÇO}.
+*/
 
