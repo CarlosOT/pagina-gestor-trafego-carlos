@@ -5,7 +5,8 @@ let c = 0;
 
 //PARA ESCONDER ÁREA DE BOTÃO
 let idWhatsapp = document.getElementById('whatsapp');
-let escondeWhatsapp = idWhatsapp.innerHTML = '';
+let esconde = [""]
+idWhatsapp.innerHTML = esconde[0];
 
 
 function execucao(){ 
