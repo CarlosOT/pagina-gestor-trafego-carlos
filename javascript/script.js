@@ -32,5 +32,6 @@ function execucao(){
         }
 
     }
+    window.alert(nome);
 }
 
