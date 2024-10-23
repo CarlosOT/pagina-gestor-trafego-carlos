@@ -7,7 +7,6 @@ let c = 0;
 let idWhatsapp = document.getElementById('whatsapp');
 idWhatsapp.style.display = "none";
 
-
 function execucao(){ 
     let inputPrincipal = document.getElementById('inputPrincipal');
     if(inputPrincipal.value.length == 0){
