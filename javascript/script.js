@@ -11,10 +11,12 @@ botaoWhatsapp.style.display = "none";
 inputPrincipal.style.display = "";
 botaoOk.style.display = "";
 
-
+inputPrincipal.focus();
 function execucao(){ 
     let inputPrincipal = document.getElementById('inputPrincipal');
     let botaoOk = document.getElementById('botaoOk');
+    let borda = document.getElementById('bordaPrincipal');
+    let img = document.getElementById('imgCarlos');
     
 
     if(inputPrincipal.value.length == 0){
@@ -32,6 +34,7 @@ function execucao(){
         }
 
     }
+    inputPrincipal.focus();
     window.alert(nome);
 }
 
