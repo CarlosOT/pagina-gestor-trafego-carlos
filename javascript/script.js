@@ -16,7 +16,7 @@ function execucao(){
     let inputPrincipal = document.getElementById('inputPrincipal');
     let botaoOk = document.getElementById('botaoOk');
     let borda = document.getElementById('bordaPrincipal');
-    let img = document.getElementById('imgCarlos');
+    let imgCarlos = document.getElementById('imgCarlos');
     
 
     if(inputPrincipal.value.length == 0){
@@ -31,6 +31,10 @@ function execucao(){
             inputPrincipal.style.display = "none";
             botaoOk.style.display = "none";
             botaoWhatsapp.style.display = "";
+            borda.style.borderColor = "rgb(66, 241, 2)";
+            borda.style["boxShadow"] = "1px 1px 5px #42f102";
+            imgCarlos.style.borderColor = "rgb(66, 241, 2)";
+            imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
         }
 
     }

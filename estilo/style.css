@@ -67,7 +67,7 @@ body{
 }#bordaPrincipal{
     margin: auto;
     width: 800px;
-    border-color: rgb(0, 191, 255);
+    border-color: #00bfff;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgb(0, 191, 255);
 
@@ -77,7 +77,7 @@ body{
     border-color: rgb(0, 191, 255);
     border-radius: 100px;
     margin-top: 15px;
-    box-shadow: 1px 1px 10px rgb(0, 191, 255);
+    box-shadow: 1px 1px 8px rgb(0, 191, 255);
 
 }#botaoOk{
     background-color: rgb(0, 191, 255);
@@ -103,7 +103,7 @@ body{
 /*SELETORES POR CLASSE*/
 
 .wrapper{
-    background-color: rgb(66, 241, 2);
+    background-color: #42f102;
     border-radius: 10px;
     padding: 17px 20px 17px 20px;
     font-size: 15px; /*está alterando o tamanho do ícone do whatsapp*/
