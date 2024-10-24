@@ -4,7 +4,7 @@ let listaPlaceHolders = ["JÁ TEM CONTA NO GOOGLE ADS?","INFORME SEU SITE","INFO
 let c = 0;
 
 //ESCONDER
-let botaoWhatsapp = document.querySelector('.wrapper');
+let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
 botaoWhatsapp.style.display = "none";
 let barraProgresso = document.getElementById('barraProgresso');
 barraProgresso.style.display = "none";
