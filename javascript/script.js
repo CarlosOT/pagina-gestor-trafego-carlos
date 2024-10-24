@@ -17,12 +17,19 @@ botaoOk.style.display = "";
 let progresso = 0;
 let largura = 0;
 
+//LINKS WHATSAPP
+let whatsWeb = document.getElementById('linkWhatsWeb');
+let whatsDesk = document.getElementById('linkWhatsDesk');
+let linkWhatsDesk = "https://api.whatsapp.com/send?phone=5511968255910";
+let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910";
+
 inputPrincipal.focus();
 function execucao(){ 
     let inputPrincipal = document.getElementById('inputPrincipal');
     let botaoOk = document.getElementById('botaoOk');
     let borda = document.getElementById('bordaPrincipal');
     let imgCarlos = document.getElementById('imgCarlos');
+    
 
     if(inputPrincipal.value.length == 0){
         window.alert('O CAMPO NÃO PODE FICAR VAZIO')
@@ -46,6 +53,8 @@ function execucao(){
             imgCarlos.style.borderColor = "rgb(66, 241, 2)";
             imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
             barraProgresso.style.backgroundColor = "#42f102";
+            whatsDesk.href = linkWhatsDesk;
+            whatsWeb.href = linkWhatsWeb;
         }
 
     }
