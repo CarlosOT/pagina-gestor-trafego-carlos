@@ -9,7 +9,9 @@ let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
 botaoWhatsapp.style.display = "none";
 let barraProgresso = document.getElementById('barraProgresso');
 barraProgresso.style.display = "none";
+
 let headLine = document.getElementById('headline');
+let tituloH1 = document.getElementById('tituloH1');
 
 //TEMPORÁRIO PARA TESTES
 inputPrincipal.style.display = "";
@@ -50,8 +52,10 @@ function execucao(){
         barraProgresso.style.display = "";
         
         if(nome.length == 4){
+            tituloH1.style.display = "none";
+
             headLine.style.display = "";
-            headLine.innerHTML = "Para nos enviar as informações preenchidas, ABRA seu Whatsapp no computador e CLIQUE em uma das opções abaixo!";
+            headLine.innerHTML = "Para nos enviar as informações preenchidas, ABRA seu Whatsapp no computador e CLIQUE em uma das opções abaixo para acessar pelo:";
 
             inputPrincipal.style.display = "none";
             botaoOk.style.display = "none";
