@@ -9,10 +9,12 @@ let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
 botaoWhatsapp.style.display = "none";
 let barraProgresso = document.getElementById('barraProgresso');
 barraProgresso.style.display = "none";
+let headLine = document.getElementById('headline');
 
 //TEMPORÁRIO PARA TESTES
 inputPrincipal.style.display = "";
 botaoOk.style.display = "";
+headLine.style.display = "";
 
 //PROGRESSO E LARGURA
 let progresso = 0;
@@ -48,16 +50,23 @@ function execucao(){
         barraProgresso.style.display = "";
         
         if(nome.length == 4){
+            headLine.style.display = "";
+            headLine.innerHTML = "Para nos enviar as informações preenchidas, ABRA seu Whatsapp no computador e CLIQUE em uma das opções abaixo!";
+
             inputPrincipal.style.display = "none";
             botaoOk.style.display = "none";
             botaoWhatsapp.style.display = "";
-            borda.style.borderColor = "rgb(66, 241, 2)";
-            borda.style["boxShadow"] = "1px 1px 5px #42f102";
-            imgCarlos.style.borderColor = "rgb(66, 241, 2)";
-            imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
-            barraProgresso.style.backgroundColor = "#42f102";
             whatsDesk.href = linkWhatsDesk;
             whatsWeb.href = linkWhatsWeb;
+            
+            borda.style.borderColor = "rgb(66, 241, 2)";
+            borda.style["boxShadow"] = "1px 1px 5px #42f102";
+
+            imgCarlos.style.borderColor = "rgb(66, 241, 2)";
+            imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
+
+            barraProgresso.style.backgroundColor = "#42f102";
+
         }
 
     }
