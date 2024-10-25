@@ -4,19 +4,24 @@ let listaPlaceHolders = ["JÁ TEM CONTA NO GOOGLE ADS?","INFORME SEU SITE","INFO
 let listaRespostas = ["Nome:", "Tem conta no Google Ads:", "Site:", "Principal Serviço:"];
 let c = 0; //contador
 
-//ESCONDER
+//GET
 let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
-botaoWhatsapp.style.display = "none";
 let barraProgresso = document.getElementById('barraProgresso');
-barraProgresso.style.display = "none";
-
 let headLine = document.getElementById('headline');
 let tituloH1 = document.getElementById('tituloH1');
+let tituloH2_1 = document.getElementById('tituloH2_1');
+let tituloH2_2 = document.getElementById('tituloH2_2');
 
-//TEMPORÁRIO PARA TESTES
+//ESCONDENDO PARA TESTES
+botaoWhatsapp.style.display = "none";
+barraProgresso.style.display = "none";
 inputPrincipal.style.display = "";
 botaoOk.style.display = "";
 headLine.style.display = "";
+tituloH1.style.display = "";
+tituloH2_1.style.display = "";
+tituloH2_2.style.display = "none";
+
 
 //PROGRESSO E LARGURA
 let progresso = 0;
@@ -53,6 +58,8 @@ function execucao(){
         
         if(nome.length == 4){
             tituloH1.style.display = "none";
+            tituloH2_1.style.display = "none";
+            tituloH2_2.style.display = "";
 
             headLine.style.display = "";
             headLine.innerHTML = "Para nos enviar as informações preenchidas, ABRA seu Whatsapp no computador e CLIQUE em uma das opções abaixo para acessar pelo:";

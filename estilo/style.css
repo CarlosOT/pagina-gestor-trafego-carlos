@@ -78,7 +78,7 @@ body{
     color: white;
     font-size: 15px;
 
-}#tituloGads{
+}#tituloGads_1{
     border: 1px solid;
     border-radius: 3px;
     padding: 5px;
@@ -117,4 +117,8 @@ body{
 }#txtVenderMais{
     color: rgb(66, 241, 2);
     font-weight: 600;
+
+}#tituloH2_2{
+    margin-top: 10px;
+    color: rgb(66, 241, 2);
 }
