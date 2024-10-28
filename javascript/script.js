@@ -30,8 +30,8 @@ let largura = 0;
 //LINKS WHATSAPP
 let whatsWeb = document.getElementById('linkWhatsWeb');
 let whatsDesk = document.getElementById('linkWhatsDesk');
-let linkWhatsDesk = "https://api.whatsapp.com/send?phone=5511968255910&text=";
-let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=";
+let linkWhatsDesk = "https://api.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A";
+let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A";
 
 inputPrincipal.focus();
 function execucao(){ 
@@ -47,8 +47,8 @@ function execucao(){
         nome.push(String(inputPrincipal.value).toUpperCase());
         inputPrincipal.value = '';
         inputPrincipal.placeholder = listaPlaceHolders[c];
-        linkWhatsDesk += `${listaRespostas[c]}%20*${nome[c]}*%20//%20`;
-        linkWhatsWeb += `${listaRespostas[c]}%20*${nome[c]}*%20//%20`;
+        linkWhatsDesk += `${listaRespostas[c]}%20*${nome[c]}*%20%0A`;
+        linkWhatsWeb += `${listaRespostas[c]}%20*${nome[c]}*%20%0A`;
         c++;
         progresso += 25;
         largura += 190;
