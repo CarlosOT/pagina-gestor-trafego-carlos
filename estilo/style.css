@@ -45,8 +45,11 @@ body{
     border-radius: 5px;
     color: white;
     font-size: 20px;
-    border: 3px solid;
-    border-color: rgb(0, 191, 255); 
+    outline: none;
+
+}#inputPrincipal:focus-within{
+    border: solid 2px;
+    border-color: rgb(0, 191, 255);
 
 }#headline{ 
     text-align: center;
