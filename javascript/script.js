@@ -63,7 +63,7 @@ function execucao(){
             tituloH2_2.style.display = "";
 
             headLine.style.display = "";
-            headLine.innerHTML = "Clique no botão abaixo para falar conosco. Tire todas as suas dúvidas e contrate assessoria completa em gestão de tráfego google ads para a sua empresa por um preço especial que cabe no seu bolso!";
+            headLine.innerHTML = "Seu acesso a nossa equipe foi liberado! Fale conosco e tire todas as suas dúvidas para contratar assessoria completa em Gestão de Tráfego Google Ads por um preço especial que cabe no seu bolso!";
 
             inputPrincipal.style.display = "none";
             botaoOk.style.display = "none";
