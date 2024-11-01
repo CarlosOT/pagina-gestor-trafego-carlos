@@ -41,7 +41,7 @@ function execucao(){
     let borda = document.getElementById('bordaPrincipal');
     let imgCarlos = document.getElementById('imgCarlos');
     
-
+    //VALIDAÇÃO
     if(inputPrincipal.value.length == 0){
         window.alert('O CAMPO NÃO PODE FICAR VAZIO')
     }else{
@@ -57,6 +57,7 @@ function execucao(){
         barraProgresso.style.width = `${largura}px`
         barraProgresso.style.display = "";
         
+        //QUANDO OS DADOS JÁ FORAM RECEBIDOS
         if(nome.length == 4){
             tituloH1.style.display = "none";
             tituloH2_1.style.display = "none";
