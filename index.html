@@ -8,6 +8,22 @@
     <link rel="shortcut icon" href="imagens/googleAds/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="javascript/script.js" defer></script>
+    <!-- Event snippet for clique whatsapp gestão de trafego conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11482390638/JOSkCKea-KUZEO7AneMq',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <title>Google Ads</title>
 </head>
 <body>
