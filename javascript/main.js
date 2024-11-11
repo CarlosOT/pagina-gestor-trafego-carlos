@@ -1,12 +1,6 @@
 /*
 ROADMAP
 
-[1] CONDIÇÕES QUE O CLIENTE PRECISA ESTAR CIENTE
-1.1 PRECISA TER SALDO NO GOOGLE TODA SEMANA OU MÊS
-1.2 O CLIENTE PRECISA TER PACIÊNCIA COM O PROCESSO QUE PODE LEVAR ATÉ 3 MESES
-1.3 O SITE PRECISA ESTAR DEVIDAMENTE OTIMIZADO
-1.4 O ATENDIMENTO PRECISA SER EXCELENTE E O WHATSAPP PRECISA SER COMERCIAL
-1.5 COOPERAÇÃO MÚTUA
 
 */
 
@@ -42,7 +36,7 @@ inputPrincipal.focus();
 function execucao(){ 
     //VALIDAÇÃO
     if(inputPrincipal.value.length == 0){
-        window.alert('O CAMPO NÃO PODE FICAR VAZIO')
+        window.alert('VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER')
     }else{
         m.showElement('hr');
         m.hideElement('tituloH2_1');
@@ -52,19 +46,21 @@ function execucao(){
         inputPrincipal.value = '';
         inputPrincipal.placeholder = a.listArrays.listShowPlaceHolders[c];
 
-        if (c < 4){
+        if (c <= 3){
             linkWhatsWeb += `${a.listArrays.listPaddingInput[c]}%20*${a.listArrays.listInput[c]}*%20%0A`;
+        }else{
+            botaoOk.value = "ESTOU CIENTE";
         }
 
         c++;
-        progresso += 20;
-        largura += 152;
+        progresso += 9;
+        largura += 60;
         barraProgresso.innerText = `${progresso}%`
         barraProgresso.style.width = `${largura}px`
         m.showElement('barraProgresso');
         
         //QUANDO OS DADOS JÁ FORAM RECEBIDOS
-        if(a.listArrays.listInput.length == 5){
+        if(a.listArrays.listInput.length == 12){
             m.hideElement('tituloH1');
             m.hideElement('tituloH2_1');
             m.showElement('tituloH2_2');
