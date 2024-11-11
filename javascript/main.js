@@ -44,7 +44,8 @@ let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3
 inputPrincipal.focus();
 
 function execucao(){ 
-    
+    mds.hideElement('tituloH1');
+    mds.hideElement('tituloH2_1');
     //VALIDAÇÃO
     if(inputPrincipal.value.length == 0){
         window.alert('O CAMPO NÃO PODE FICAR VAZIO')
@@ -65,25 +66,17 @@ function execucao(){
             mds.hideElement('tituloH1');
             mds.hideElement('tituloH2_1');
             mds.showElement('tituloH2_2');
-
             mds.showElement('headline');
-            headLine.innerHTML = "Seu acesso a nossa equipe foi liberado! Fale conosco e tire todas as suas dúvidas para contratar assessoria completa em Gestão de Tráfego Google Ads por um preço especial que cabe no seu bolso!";
-
             mds.hideElement('inputPrincipal');
             mds.hideElement('botaoOk');
             mds.showElement('botaoWhatsapp');
-            //whatsDesk.href = linkWhatsDesk;
-            whatsWeb.href = linkWhatsWeb;
             mds.hideElement('barraProgresso');
-            
+            headLine.innerHTML = "Seu acesso a nossa equipe foi liberado! Fale conosco e tire todas as suas dúvidas para contratar assessoria completa em Gestão de Tráfego Google Ads por um preço especial que cabe no seu bolso!";
+            whatsWeb.href = linkWhatsWeb;
             borda.style.borderColor = "rgb(66, 241, 2)";
             borda.style["boxShadow"] = "1px 1px 5px #42f102";
-
             imgCarlos.style.borderColor = "rgb(66, 241, 2)";
             imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
-
-            //barraProgresso.style.backgroundColor = "#42f102";
-
         }
 
     }
