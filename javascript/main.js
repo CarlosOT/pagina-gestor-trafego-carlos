@@ -1,23 +1,18 @@
 /*
 ROADMAP
 
-[1.0] PRIMEIRA TELA "PROCURANDO ESPECIALISTA?"
-[1.1] INPUT: RECEBER NOME DO CLIENTE
-[1.2] INPUT: SABER SE O CLIENTE JÁ TEM CONTA NO GOOGLE ADS
-[1.3] INPUT: RECEBER O SITE DO CLIENTE
-[1.4] INPUT: SABER QUAL O PRINCIPAL SERVIÇO DO CLIENTE
-
-[2.0] CRIAR CONSCIENTIZAÇÃO NO CLIENTE SOBRE O FUNCIONAMENTO DO GOOGLE ADS
-[2.1] RADIO BUTTON + IMG: ACEITAÇÃO DO CLIENTE
+[1] CONDIÇÕES QUE O CLIENTE PRECISA ESTAR CIENTE
+1.1 PRECISA TER SALDO NO GOOGLE TODA SEMANA OU MÊS
+1.2 O CLIENTE PRECISA TER PACIÊNCIA COM O PROCESSO QUE PODE LEVAR ATÉ 3 MESES
+1.3 O SITE PRECISA ESTAR DEVIDAMENTE OTIMIZADO
+1.4 O ATENDIMENTO PRECISA SER EXCELENTE E O WHATSAPP PRECISA SER COMERCIAL
+1.5 COOPERAÇÃO MÚTUA
 
 */
 
-import * as mds from "../modules/md.js"
+import * as m from "../modules/methods.js"
+import * as a from "../modules/acessArrays.js"
 
-let nome = [];
-let listaPlaceHolders = ["JÁ TEM CONTA NO GOOGLE ADS?","INFORME SEU SITE","INFORME SEU PRINCIPAL SERVIÇO"];
-let listaRespostas = ["Nome:", "Tem conta no Google Ads:", "Site:", "Principal Serviço:"];
-let c = 0;
 
 let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
 let barraProgresso = document.getElementById('barraProgresso');
@@ -30,13 +25,14 @@ let botaoOk = document.getElementById('botaoOk');
 let borda = document.getElementById('bordaPrincipal');
 let imgCarlos = document.getElementById('imgCarlos');
 
-mds.hideElement('botaoWhatsapp');
-mds.hideElement('barraProgresso');
-mds.hideElement('tituloH2_2');
-
+m.hideElement('botaoWhatsapp');
+m.hideElement('barraProgresso');
+m.hideElement('tituloH2_2');
+m.hideElement('hr');   
 
 let progresso = 0;
 let largura = 0;
+let c = 0;
 
 let whatsWeb = document.getElementById('linkWhatsWeb');
 let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A";
@@ -44,34 +40,42 @@ let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3
 inputPrincipal.focus();
 
 function execucao(){ 
-    mds.hideElement('tituloH1');
-    mds.hideElement('tituloH2_1');
     //VALIDAÇÃO
     if(inputPrincipal.value.length == 0){
         window.alert('O CAMPO NÃO PODE FICAR VAZIO')
     }else{
-        nome.push(String(inputPrincipal.value).toUpperCase());
+        m.showElement('hr');
+        m.hideElement('tituloH2_1');
+        headLine.innerText = a.listArrays.listHeadlines[c];
+        m.setFontSize('headline', '25px');
+        a.listArrays.listInput.push(String(inputPrincipal.value).toUpperCase());
         inputPrincipal.value = '';
-        inputPrincipal.placeholder = listaPlaceHolders[c];
-        linkWhatsWeb += `${listaRespostas[c]}%20*${nome[c]}*%20%0A`;
+        inputPrincipal.placeholder = a.listArrays.listShowPlaceHolders[c];
+
+        if (c < 4){
+            linkWhatsWeb += `${a.listArrays.listPaddingInput[c]}%20*${a.listArrays.listInput[c]}*%20%0A`;
+        }
+
         c++;
-        progresso += 25;
-        largura += 190;
+        progresso += 20;
+        largura += 152;
         barraProgresso.innerText = `${progresso}%`
         barraProgresso.style.width = `${largura}px`
-        mds.showElement('barraProgresso');
+        m.showElement('barraProgresso');
         
         //QUANDO OS DADOS JÁ FORAM RECEBIDOS
-        if(nome.length == 4){
-            mds.hideElement('tituloH1');
-            mds.hideElement('tituloH2_1');
-            mds.showElement('tituloH2_2');
-            mds.showElement('headline');
-            mds.hideElement('inputPrincipal');
-            mds.hideElement('botaoOk');
-            mds.showElement('botaoWhatsapp');
-            mds.hideElement('barraProgresso');
-            headLine.innerHTML = "Seu acesso a nossa equipe foi liberado! Fale conosco e tire todas as suas dúvidas para contratar assessoria completa em Gestão de Tráfego Google Ads por um preço especial que cabe no seu bolso!";
+        if(a.listArrays.listInput.length == 5){
+            m.hideElement('tituloH1');
+            m.hideElement('tituloH2_1');
+            m.showElement('tituloH2_2');
+            m.showElement('headline');
+            m.hideElement('inputPrincipal');
+            m.hideElement('botaoOk');
+            m.showElement('botaoWhatsapp');
+            m.hideElement('barraProgresso');
+            m.hideElement('hr');
+            headLine.innerText = a.listArrays.finalText;
+            m.setFontSize('headline', '30px');
             whatsWeb.href = linkWhatsWeb;
             borda.style.borderColor = "rgb(66, 241, 2)";
             borda.style["boxShadow"] = "1px 1px 5px #42f102";

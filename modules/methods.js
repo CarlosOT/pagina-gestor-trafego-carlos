@@ -148,4 +148,3 @@ export function setMarginBottom(idElement, value){
 export function setFontSize(idElement, value){
     document.getElementById(idElement).style.fontSize = value;
 }
-
