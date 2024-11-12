@@ -6,8 +6,6 @@ import * as m from "../modules/methods.js"
 import * as a from "../modules/acessArrays.js"
 
 
-
-let botaoWhatsapp = document.querySelector('#botaoWhatsapp');
 let barraProgresso = document.getElementById('barraProgresso');
 let headLine = document.getElementById('headline');
 let tituloH1 = document.getElementById('tituloH1');
@@ -21,7 +19,6 @@ let imgCarlos = document.getElementById('imgCarlos');
 m.hideElement('botaoWhatsapp');
 m.hideElement('barraProgresso');
 m.hideElement('tituloH2_2');
-m.hideElement('hr');   
 
 let progresso = 0;
 let largura = 0;
@@ -37,14 +34,24 @@ function execucao(){
     if(inputPrincipal.value.length == 0){
         window.alert('VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER')
     }else{
-        $("#headline").hide().slideDown(1500);
-        m.showElement('hr');
+        $("#headline").hide().slideDown(2000);
         m.hideElement('tituloH2_1');
         headLine.innerText = a.listArrays.listHeadlines[c];
         m.setFontSize('headline', '25px');
         a.listArrays.listInput.push(String(inputPrincipal.value).toUpperCase());
         inputPrincipal.value = '';
         inputPrincipal.placeholder = a.listArrays.listShowPlaceHolders[c];
+
+        if(a.listArrays.listInput.length < 12){
+            m.hideElement('inputPrincipal');
+            m.hideElement('botaoOk');
+            setTimeout(fadeIn, 5000);
+            function fadeIn() {
+              $("#inputPrincipal").fadeIn();
+              $("#botaoOk").fadeIn();
+              inputPrincipal.focus();
+            }
+        }
 
         if (c <= 3){
             linkWhatsWeb += `${a.listArrays.listPaddingInput[c]}%20*${a.listArrays.listInput[c]}*%20%0A`;
@@ -69,7 +76,6 @@ function execucao(){
             m.hideElement('botaoOk');
             m.showElement('botaoWhatsapp');
             m.hideElement('barraProgresso');
-            m.hideElement('hr');
             headLine.innerText = a.listArrays.finalText;
             m.setFontSize('headline', '30px');
             whatsWeb.href = linkWhatsWeb;
@@ -80,7 +86,6 @@ function execucao(){
         }
 
     }
-    inputPrincipal.focus();
 }
 
 document.getElementById('botaoOk').addEventListener('click', execucao);

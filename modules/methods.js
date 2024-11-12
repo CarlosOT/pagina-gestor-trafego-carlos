@@ -148,3 +148,8 @@ export function setMarginBottom(idElement, value){
 export function setFontSize(idElement, value){
     document.getElementById(idElement).style.fontSize = value;
 }
+
+
+export function testeDelay(idElement, delayFade){
+    $(idElement).fadeIn(delayFade);
+}
