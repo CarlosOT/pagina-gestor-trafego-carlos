@@ -37,7 +37,7 @@ function execucao(){
     if(inputPrincipal.value.length == 0){
         window.alert('VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER')
     }else{
-        $("#headline").hide().slideDown(1000);
+        $("#headline").hide().slideDown(1500);
         m.showElement('hr');
         m.hideElement('tituloH2_1');
         headLine.innerText = a.listArrays.listHeadlines[c];
