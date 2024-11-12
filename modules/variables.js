@@ -6,6 +6,7 @@ let progresso = 0;
 let largura = 0;
 let contador = 0;
 let linkWhatsApp = t.linkWhats();
+
 //MÉTODOS
 
 /**
