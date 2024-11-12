@@ -4,66 +4,50 @@ ROADMAP
 
 import * as m from "../modules/methods.js"
 import * as a from "../modules/acessArrays.js"
+import * as t from "../modules/texts.js"
+import * as v from "../modules/variables.js"
 
-
-let barraProgresso = document.getElementById('barraProgresso');
-let headLine = document.getElementById('headline');
-let tituloH1 = document.getElementById('tituloH1');
-let tituloH2_1 = document.getElementById('tituloH2_1');
-let tituloH2_2 = document.getElementById('tituloH2_2');
-let inputPrincipal = document.getElementById('inputPrincipal');
-let botaoOk = document.getElementById('botaoOk');
-let borda = document.getElementById('bordaPrincipal');
-let imgCarlos = document.getElementById('imgCarlos');
 
 m.hideElement('botaoWhatsapp');
 m.hideElement('barraProgresso');
 m.hideElement('tituloH2_2');
-
-let progresso = 0;
-let largura = 0;
-let c = 0;
-
-let whatsWeb = document.getElementById('linkWhatsWeb');
-let linkWhatsWeb = "https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A";
-
-inputPrincipal.focus();
+m.setFocus('inputPrincipal');
 
 function execucao(){ 
     //VALIDAÇÃO
-    if(inputPrincipal.value.length == 0){
-        window.alert('VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER')
+    if(m.getLength('inputPrincipal') == 0){
+        window.alert(t.emptyField())
     }else{
         $("#headline").hide().slideDown(2000);
         m.hideElement('tituloH2_1');
-        headLine.innerText = a.listArrays.listHeadlines[c];
+        m.insertText('headline', a.listArrays.listHeadlines[v.getContador()]);
         m.setFontSize('headline', '25px');
         a.listArrays.listInput.push(String(inputPrincipal.value).toUpperCase());
-        inputPrincipal.value = '';
-        inputPrincipal.placeholder = a.listArrays.listShowPlaceHolders[c];
+        m.setValue('inputPrincipal', '');
+        m.setPlaceHolder('inputPrincipal', a.listArrays.listShowPlaceHolders[v.getContador()]);
 
         if(a.listArrays.listInput.length < 12){
             m.hideElement('inputPrincipal');
             m.hideElement('botaoOk');
-            setTimeout(fadeIn, 5000);
+            setTimeout(fadeIn, 1000);
             function fadeIn() {
               $("#inputPrincipal").fadeIn();
               $("#botaoOk").fadeIn();
-              inputPrincipal.focus();
+              m.setFocus('inputPrincipal');
             }
         }
 
-        if (c <= 3){
-            linkWhatsWeb += `${a.listArrays.listPaddingInput[c]}%20*${a.listArrays.listInput[c]}*%20%0A`;
+        if (v.getContador() <= 3){
+            v.setLinkWhats(`${a.listArrays.listPaddingInput[v.getContador()]}%20*${a.listArrays.listInput[v.getContador()]}*%20%0A`);
         }else{
-            botaoOk.value = "ESTOU CIENTE";
+            m.setValue('botaoOk', t.botaoCiente());
         }
 
-        c++;
-        progresso += 9;
-        largura += 60;
-        barraProgresso.innerText = `${progresso}%`
-        barraProgresso.style.width = `${largura}px`
+        v.setIncrement();
+        v.setProgresso(9);
+        v.setLargura(60);
+        m.insertText('barraProgresso', `${v.getProgresso()}%`);
+        m.setWidth('barraProgresso', `${v.getLargura()}px`);
         m.showElement('barraProgresso');
         
         //QUANDO OS DADOS JÁ FORAM RECEBIDOS
@@ -76,13 +60,13 @@ function execucao(){
             m.hideElement('botaoOk');
             m.showElement('botaoWhatsapp');
             m.hideElement('barraProgresso');
-            headLine.innerText = a.listArrays.finalText;
+            m.insertText('headline', a.listArrays.finalText);
             m.setFontSize('headline', '30px');
-            whatsWeb.href = linkWhatsWeb;
-            borda.style.borderColor = "rgb(66, 241, 2)";
-            borda.style["boxShadow"] = "1px 1px 5px #42f102";
-            imgCarlos.style.borderColor = "rgb(66, 241, 2)";
-            imgCarlos.style["boxShadow"] = "1px 1px 8px #42f102";
+            m.setHref('linkWhatsWeb', v.getLinkWhats());
+            m.setBorderColor('bordaPrincipal', "rgb(66, 241, 2)");
+            m.setBoxShadow('bordaPrincipal', '1px 1px 5px #42f102');
+            m.setBorderColor('imgCarlos', 'rgb(66, 241, 2)');
+            m.setBoxShadow('imgCarlos', '1px 1px 8px #42f102');
         }
 
     }
