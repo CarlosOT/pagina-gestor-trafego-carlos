@@ -6,14 +6,14 @@ import * as m from "../modules/methods.js"
 import * as t from "../modules/texts.js"
 import * as v from "../modules/variables.js"
 
-
+// ELEMENTOS ESCONDIDOS ATÉ QUE O USUÁRIO FORNEÇA A PRIMEIRA RESPOSTA
 m.hideElement('botaoWhatsapp');
 m.hideElement('barraProgresso');
 m.hideElement('tituloH2_2');
 m.setFocus('inputPrincipal');
 
 function execucao(){ 
-    // VALIDAÇÃO CAMPO NÃO ACEITA ZERO
+    // VALIDAÇÃO --> CAMPO NÃO ACEITA ZERO
     if(m.getLength('inputPrincipal') == 0){
         window.alert(t.emptyField())
     }else{
