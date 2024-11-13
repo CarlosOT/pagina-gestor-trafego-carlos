@@ -2,74 +2,73 @@
 ROADMAP
 */
 
-import * as m from "../modules/methods.js"
-import * as t from "../modules/texts.js"
-import * as v from "../modules/variables.js"
+import * as mg from "../modules/methodsGeneral.js"
+import * as mt from "../modules/methodsText.js"
+import * as mv from "../modules/methodsVariables.js"
 
 // ELEMENTOS ESCONDIDOS ATÉ QUE O USUÁRIO FORNEÇA A PRIMEIRA RESPOSTA
-m.hideElement('botaoWhatsapp');
-m.hideElement('barraProgresso');
-m.hideElement('tituloH2_2');
-m.setFocus('inputPrincipal');
+mg.hideElement('botaoWhatsapp');
+mg.hideElement('barraProgresso');
+mg.hideElement('tituloH2_2');
+mg.setFocus('inputPrincipal');
 
 function execucao(){ 
     // VALIDAÇÃO --> CAMPO NÃO ACEITA ZERO
-    if(m.getLength('inputPrincipal') == 0){
-        window.alert(t.emptyField())
+    if(mg.getLength('inputPrincipal') == 0){
+        window.alert(mt.emptyField())
     }else{
         // LOOP FINITO PARA CONCIENTIZAR O CLIENTE E RECEBER INFORMAÇÕES 
         $("#headline").hide().slideDown(2000);
-        m.hideElement('tituloH2_1');
-        m.insertText('headline', t.list.headlines[v.getContador()]);
-        m.setFontSize('headline', '25px');
-        t.list.input.push(String(inputPrincipal.value).toUpperCase());
-        m.setValue('inputPrincipal', '');
-        m.setPlaceHolder('inputPrincipal', t.list.showPlaceHolders[v.getContador()]);
+        mg.hideElement('tituloH2_1');
+        mg.insertText('headline', mt.list.headlines[mv.getContador()]);
+        mg.setFontSize('headline', '25px');
+        mt.list.input.push(String(inputPrincipal.value).toUpperCase());
+        mg.setValue('inputPrincipal', '');
+        mg.setPlaceHolder('inputPrincipal', mt.list.showPlaceHolders[mv.getContador()]);
 
-        if(t.list.input.length < 12){
-            m.hideElement('inputPrincipal');
-            m.hideElement('botaoOk');
+        if(mt.list.input.length < 12){
+            mg.hideElement('inputPrincipal');
+            mg.hideElement('botaoOk');
             setTimeout(fadeIn, 5000);
             function fadeIn() {
               $("#inputPrincipal").fadeIn();
               $("#botaoOk").fadeIn();
-              m.setFocus('inputPrincipal');
+              mg.setFocus('inputPrincipal');
             }
         }
 
-        if (v.getContador() <= 3){
-            v.setLinkWhats(`${t.list.paddingInput[v.getContador()]}%20*${t.list.input[v.getContador()]}*%20%0A`);
+        if (mv.getContador() <= 3){
+            mv.setLinkWhats(`${mt.list.paddingInput[mv.getContador()]}%20*${mt.list.input[mv.getContador()]}*%20%0A`);
         }else{
-            m.setValue('botaoOk', t.botaoCiente());
+            mg.setValue('botaoOk', mt.botaoCiente());
         }
 
-        v.setIncrement();
-        v.setProgresso(9);
-        v.setLargura(60);
-        m.insertText('barraProgresso', `${v.getProgresso()}%`);
-        m.setWidth('barraProgresso', `${v.getLargura()}px`);
-        m.showElement('barraProgresso');
+        mv.setIncrement();
+        mv.setProgresso(9);
+        mv.setLargura(60);
+        mg.insertText('barraProgresso', `${mv.getProgresso()}%`);
+        mg.setWidth('barraProgresso', `${mv.getLargura()}px`);
+        mg.showElement('barraProgresso');
         
         //APÓS TODOS OS DADOS SEREM RECEBIDOS
-        if(t.list.input.length == 12){
-            m.hideElement('tituloH1');
-            m.hideElement('tituloH2_1');
-            m.showElement('tituloH2_2');
-            m.showElement('headline');
-            m.hideElement('inputPrincipal');
-            m.hideElement('botaoOk');
-            m.showElement('botaoWhatsapp');
-            m.hideElement('barraProgresso');
-            m.insertText('headline', t.list.finalText);
-            m.setFontSize('headline', '30px');
-            m.setHref('linkWhatsWeb', v.getLinkWhats());
-            m.setBorderColor('bordaPrincipal', "rgb(66, 241, 2)");
-            m.setBoxShadow('bordaPrincipal', '1px 1px 5px #42f102');
-            m.setBorderColor('imgCarlos', 'rgb(66, 241, 2)');
-            m.setBoxShadow('imgCarlos', '1px 1px 8px #42f102');
+        if(mt.list.input.length == 12){
+            mg.hideElement('tituloH1');
+            mg.hideElement('tituloH2_1');
+            mg.showElement('tituloH2_2');
+            mg.showElement('headline');
+            mg.hideElement('inputPrincipal');
+            mg.hideElement('botaoOk');
+            mg.showElement('botaoWhatsapp');
+            mg.hideElement('barraProgresso');
+            mg.insertText('headline', mt.list.finalText);
+            mg.setFontSize('headline', '30px');
+            mg.setHref('linkWhatsWeb', mv.getLinkWhats());
+            mg.setBorderColor('bordaPrincipal', "rgb(66, 241, 2)");
+            mg.setBoxShadow('bordaPrincipal', '1px 1px 5px #42f102');
+            mg.setBorderColor('imgCarlos', 'rgb(66, 241, 2)');
+            mg.setBoxShadow('imgCarlos', '1px 1px 8px #42f102');
         }
 
     }
 }
-
-document.getElementById('botaoOk').addEventListener('click', execucao);
+mg.addEventClick('botaoOk', execucao);

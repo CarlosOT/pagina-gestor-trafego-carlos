@@ -163,3 +163,10 @@ export function setBoxShadow(idElement, value){document.getElementById(idElement
  * @param {string} url 
  */
 export function setHref(idElement, url){document.getElementById(idElement).href = url}
+
+/**
+ * getElementById(**idElement**).addEventListener('click', **nameFunction**)
+ * @param {string} idElement 
+ * @param {function} nameFunction 
+ */
+export function addEventClick(idElement, nameFunction){document.getElementById(idElement).addEventListener('click', nameFunction)}
