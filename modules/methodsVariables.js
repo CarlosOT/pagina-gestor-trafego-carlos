@@ -1,11 +1,11 @@
-import * as mt from "./methodsText.js"
+import * as gt from "./getTexts.js"
 
 //ATRIBUTOS
 
 let progresso = 0;
 let largura = 0;
 let contador = 0;
-let linkWhatsApp = mt.linkWhats();
+let linkWhatsApp = gt.texts.linkWhats;
 
 //MÉTODOS
 

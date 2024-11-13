@@ -3,30 +3,42 @@ ROADMAP
 */
 
 import * as mg from "../modules/methodsGeneral.js"
-import * as mt from "../modules/methodsText.js"
+import * as getTxt from "../modules/getTexts.js"
 import * as mv from "../modules/methodsVariables.js"
 
 // ELEMENTOS ESCONDIDOS ATÉ QUE O USUÁRIO FORNEÇA A PRIMEIRA RESPOSTA
 mg.hideElement('botaoWhatsapp');
 mg.hideElement('barraProgresso');
 mg.hideElement('tituloH2_2');
-mg.setFocus('inputPrincipal');
 
+// HTML --> MOSTRAR ELEMENTOS AO CARREGAR PÁGINA
+mg.insertHtml('tituloH1', getTxt.texts.tituloH1);
+mg.insertHtml('tituloH2_1', getTxt.texts.tituloH2_1);
+mg.insertHtml('tituloH2_2', getTxt.texts.tituloH2_2);
+mg.insertHtml('headline', getTxt.list.headlines[mv.getContador()]);
+mg.setPlaceHolder('inputPrincipal', getTxt.list.showPlaceHolders[mv.getContador()]);
+mg.setValue('botaoOk', getTxt.texts.botaoOk);
+mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
+
+mg.setFocus('inputPrincipal');
 function execucao(){ 
+
     // VALIDAÇÃO --> CAMPO NÃO ACEITA ZERO
     if(mg.getLength('inputPrincipal') == 0){
-        window.alert(mt.emptyField())
+        window.alert(getTxt.texts.empty);
     }else{
         // LOOP FINITO PARA CONCIENTIZAR O CLIENTE E RECEBER INFORMAÇÕES 
+        mv.setIncrement();
         $("#headline").hide().slideDown(2000);
         mg.hideElement('tituloH2_1');
-        mg.insertText('headline', mt.list.headlines[mv.getContador()]);
+        mg.insertText('headline', getTxt.list.headlines[mv.getContador()]);
         mg.setFontSize('headline', '25px');
-        mt.list.input.push(String(inputPrincipal.value).toUpperCase());
+        getTxt.list.input.push(String(inputPrincipal.value).toUpperCase());
         mg.setValue('inputPrincipal', '');
-        mg.setPlaceHolder('inputPrincipal', mt.list.showPlaceHolders[mv.getContador()]);
+        mg.setPlaceHolder('inputPrincipal', getTxt.list.showPlaceHolders[mv.getContador()]);
 
-        if(mt.list.input.length < 12){
+        //TEMPO PARA APARECER O INPUT
+        if(getTxt.list.input.length < 12){
             mg.hideElement('inputPrincipal');
             mg.hideElement('botaoOk');
             setTimeout(fadeIn, 5000);
@@ -38,29 +50,32 @@ function execucao(){
         }
 
         if (mv.getContador() <= 3){
-            mv.setLinkWhats(`${mt.list.paddingInput[mv.getContador()]}%20*${mt.list.input[mv.getContador()]}*%20%0A`);
+            mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getContador()]}%20*${getTxt.list.input[mv.getContador()]}*%20%0A`);
         }else{
-            mg.setValue('botaoOk', mt.botaoCiente());
+            mg.setValue('botaoOk', getTxt.texts.botaoCiente);
         }
 
-        mv.setIncrement();
         mv.setProgresso(9);
         mv.setLargura(60);
-        mg.insertText('barraProgresso', `${mv.getProgresso()}%`);
         mg.setWidth('barraProgresso', `${mv.getLargura()}px`);
+
         mg.showElement('barraProgresso');
+
+        mg.insertText('barraProgresso', `${mv.getProgresso()}%`);
         
         //APÓS TODOS OS DADOS SEREM RECEBIDOS
-        if(mt.list.input.length == 12){
+        if(getTxt.list.input.length == 12){
             mg.hideElement('tituloH1');
             mg.hideElement('tituloH2_1');
-            mg.showElement('tituloH2_2');
-            mg.showElement('headline');
+            mg.hideElement('barraProgresso');
             mg.hideElement('inputPrincipal');
             mg.hideElement('botaoOk');
             mg.showElement('botaoWhatsapp');
-            mg.hideElement('barraProgresso');
-            mg.insertText('headline', mt.list.finalText);
+            mg.showElement('tituloH2_2');
+            mg.showElement('headline');
+            
+            mg.insertText('headline', getTxt.list.finalText);
+
             mg.setFontSize('headline', '30px');
             mg.setHref('linkWhatsWeb', mv.getLinkWhats());
             mg.setBorderColor('bordaPrincipal', "rgb(66, 241, 2)");
