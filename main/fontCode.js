@@ -24,7 +24,7 @@ export function initialValidation(){
 }
 
 export function setHeadlines(){
-    $("#headline").hide().slideDown();
+    $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
     mg.insertText('headline', getTxt.list.headlines[mv.getCounter()]);
     mg.setFontSize('headline', '25px');
@@ -59,7 +59,7 @@ export function inputPlaceHolder(){
 export function buttonFadeIn(){
     mg.hideElement('inputPrincipal');
     mg.hideElement('botaoOk');
-    setTimeout(fadeIn, );
+    setTimeout(fadeIn, 5000);
     function fadeIn() {
         $("#inputPrincipal").fadeIn();
         $("#botaoOk").fadeIn();

@@ -1,7 +1,7 @@
 import * as mg from "../modules/methodsGeneral.js"
 import * as getTxt from "../modules/getTexts.js"
 import * as mv from "../modules/methodsVariables.js"
-import * as fontCode from "./fontCode.js"
+import * as fontCode from "../main/fontCode.js"
 
 
 fontCode.initialSetup(); // antes do botão ser clicado
