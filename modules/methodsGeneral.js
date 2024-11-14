@@ -137,6 +137,13 @@ export function getLength(idElement){return document.getElementById(idElement).v
 export function setValue(idElement, content){document.getElementById(idElement).value = content}
 
 /**
+ * getElementById(**idElement**).value
+ * @param {string} idElement 
+ * @param {*} content
+ */
+export function getValue(idElement){return document.getElementById(idElement).value}
+
+/**
  * getElementById(**idElement**).placeholder = **content**
  * @param {string} idElement 
  * @param {string} content 
