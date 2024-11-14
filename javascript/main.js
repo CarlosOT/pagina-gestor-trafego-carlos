@@ -29,19 +29,26 @@ function execucao(){
     }else{
         // LOOP FINITO PARA CONCIENTIZAR O CLIENTE E RECEBER INFORMAÇÕES 
         mv.setIncrement();
-        $("#headline").hide().slideDown(2000);
+        $("#headline").hide().slideDown(0);
         mg.hideElement('tituloH2_1');
         mg.insertText('headline', getTxt.list.headlines[mv.getContador()]);
         mg.setFontSize('headline', '25px');
-        getTxt.list.input.push(String(inputPrincipal.value).toUpperCase());
+
+        if (mv.getContador() <= 4){
+            getTxt.list.input.push(String(mg.getValue('inputPrincipal')).toUpperCase());
+            mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getContador() - 1]}%20*${getTxt.list.input[mv.getContador() - 1]}*%20%0A`);
+        }else{
+            mg.setValue('botaoOk', getTxt.texts.botaoCiente);
+        }
+
         mg.setValue('inputPrincipal', '');
         mg.setPlaceHolder('inputPrincipal', getTxt.list.showPlaceHolders[mv.getContador()]);
 
         //TEMPO PARA APARECER O INPUT
-        if(getTxt.list.input.length < 12){
+        if(mv.getContador() < 11){
             mg.hideElement('inputPrincipal');
             mg.hideElement('botaoOk');
-            setTimeout(fadeIn, 5000);
+            setTimeout(fadeIn, 0);
             function fadeIn() {
               $("#inputPrincipal").fadeIn();
               $("#botaoOk").fadeIn();
@@ -49,22 +56,14 @@ function execucao(){
             }
         }
 
-        if (mv.getContador() <= 3){
-            mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getContador()]}%20*${getTxt.list.input[mv.getContador()]}*%20%0A`);
-        }else{
-            mg.setValue('botaoOk', getTxt.texts.botaoCiente);
-        }
-
         mv.setProgresso(9);
         mv.setLargura(60);
         mg.setWidth('barraProgresso', `${mv.getLargura()}px`);
-
         mg.showElement('barraProgresso');
-
         mg.insertText('barraProgresso', `${mv.getProgresso()}%`);
         
         //APÓS TODOS OS DADOS SEREM RECEBIDOS
-        if(getTxt.list.input.length == 12){
+        if(mv.getContador() == 12){
             mg.hideElement('tituloH1');
             mg.hideElement('tituloH2_1');
             mg.hideElement('barraProgresso');
