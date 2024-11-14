@@ -170,3 +170,24 @@ export function setHref(idElement, url){document.getElementById(idElement).href 
  * @param {function} nameFunction 
  */
 export function addEventClick(idElement, nameFunction){document.getElementById(idElement).addEventListener('click', nameFunction)}
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------TYPEWRITE
+import * as getTxt from "../modules/getTexts.js"
+import * as mv from "../modules/methodsVariables.js"
+
+export function typeWriterHeadline(){
+    document.getElementById("headline").innerHTML = '';
+    var i = 0;
+    function typeWriter(){
+        if (0 < getTxt.list.headlines[mv.getCounter()].length) {
+        document.getElementById("headline").innerHTML += getTxt.list.headlines[mv.getCounter()].charAt(i);
+        i++;
+        setTimeout(typeWriter, 10);
+        }
+    } 
+    typeWriter();
+}
+
+
+

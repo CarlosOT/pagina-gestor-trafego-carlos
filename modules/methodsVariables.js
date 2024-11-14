@@ -31,7 +31,7 @@ export function getLargura(){return largura}
  * return **contador**
  * @returns 
  */
-export function getContador(){return contador}
+export function getCounter(){return contador}
 
 /**
  * linkWhatsApp += **value**
@@ -55,4 +55,4 @@ export function setLargura(value){largura += value}
  * **contador++**
  * @param {int} value 
  */
-export function setIncrement(){contador++}
+export function incrementCounter(){contador++}
