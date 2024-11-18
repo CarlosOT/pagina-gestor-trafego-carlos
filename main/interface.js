@@ -18,7 +18,5 @@ function execucao(){
         fontCode.inputPlaceHolder();
         fontCode.buttonFadeIn();
 
-    }else{
-        fontCode.finalScreen();
-    }
+    }else{fontCode.finalScreen();}
 }

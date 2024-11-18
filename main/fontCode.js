@@ -19,6 +19,7 @@ export function initialSetup(){
 export function initialValidation(){
     if(mg.getLength('inputPrincipal') == 0){
         window.alert(getTxt.texts.empty);
+        mg.setFocus('inputPrincipal');
         return true;
     }
 }
@@ -35,9 +36,7 @@ export function concatLink(){
     if (mv.getCounter() <= 4){
         getTxt.list.input.push(String(mg.getValue('inputPrincipal')).toUpperCase());
         mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getCounter()-1]}%20*${getTxt.list.input[mv.getCounter()-1]}*%20%0A`);
-    }else{
-        mg.setValue('botaoOk', getTxt.texts.botaoCiente);
-    }
+    }else{mg.setValue('botaoOk', getTxt.texts.botaoCiente);}
 }
 
 export function clearInput(){
