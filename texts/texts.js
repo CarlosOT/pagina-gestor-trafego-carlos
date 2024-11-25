@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------TEXTOS GERAIS
 export let txt = {
-    tituloH1: 'Carlos Teixeira / Head de Tráfego da Congard Digital',
-    tituloH2_1: 'Procurando Especialista <span id="tituloGads_1">GOOGLE ADS?</span>',
+    tituloH1: 'Carlos Teixeira / Especialista da Agência Congard Digital Performance',
+    tituloH2_1: 'Descubra o PODER do <span id="tituloGads_1">GOOGLE ADS!</span>',
     tituloH2_2: 'OFERTA LIBERADA!',
     botaoOk: 'PRÓXIMO',
     empty:'VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER',
