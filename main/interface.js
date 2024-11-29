@@ -11,6 +11,7 @@ function execucao(){
     }else if(mv.getCounter() < (getTxt.list.headlines.length - 1)){
 
         mv.incrementCounter();
+        fontCode.setReviews();
         fontCode.setHeadlines();
         fontCode.concatLink();
         fontCode.clearInput();

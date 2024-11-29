@@ -6,6 +6,7 @@ body{
     color: white;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
     margin-top: 40px;
 }
 
@@ -15,6 +16,11 @@ label{
 
 u{
     text-decoration: underline rgb(0, 191, 255);
+}
+hr{
+    width: 50px;
+    border-color: rgb(0, 191, 255);
+    margin-top: 30px;
 }
 
 /*--------------------------------------fim seletores globais sem filhos (id ou class)*/
@@ -120,7 +126,7 @@ input#inputPrincipal:focus-within{
 
 }
 input#botaoOk{
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(66, 241, 2);
     padding: 17px 30px 17px 30px;
     margin-left: 10px;
     border-radius: 10px;
@@ -150,14 +156,38 @@ div#botaoWhatsapp > a#linkWhatsWeb{
 
 }
 /**/
-
-footer{
-    margin-top: 20px;
-}
-footer > a#linkFooter{
-    padding: 20px;
-    margin-left: 5px;
+a#linkFooter{
     color:rgb(87, 87, 87);
     text-decoration: none;
-
 }
+
+div#avaliacoes{
+    width: 600px;
+    margin: auto;
+    font-size: 15px;
+}
+div#avaliacoes > p{
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+span#stars{
+    color: rgb(255, 238, 0);
+}
+p#valueStars{
+    display: inline-block;
+}
+span#linkStar > a{
+    color: rgb(255, 238, 0);
+    text-decoration: none;
+}
+div#conteinerStars{
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+span#linkStar > a:hover{
+    color: rgb(0, 191, 255);
+}
+/**/
+
+

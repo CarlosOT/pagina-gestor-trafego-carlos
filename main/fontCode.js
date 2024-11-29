@@ -24,6 +24,10 @@ export function initialValidation(){
     }
 }
 
+export function setReviews(){
+    mg.hideElement('avaliacoes');
+}
+
 export function setHeadlines(){
     $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
