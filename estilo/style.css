@@ -178,7 +178,8 @@ p#valueStars{
     display: inline-block;
 }
 span#linkStar > a{
-    color: rgb(255, 238, 0);
+    /* color: rgb(255, 238, 0); */
+    color: rgb(0, 191, 255);
     text-decoration: none;
 }
 div#conteinerStars{
@@ -186,7 +187,8 @@ div#conteinerStars{
     margin-bottom: -15px;
 }
 span#linkStar > a:hover{
-    color: rgb(0, 191, 255);
+    color: rgb(255, 238, 0);
+    /* color: rgb(0, 191, 255); */
 }
 /**/
 
