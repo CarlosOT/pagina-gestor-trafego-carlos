@@ -76,15 +76,15 @@ legend > img#imgCarlos{
 /**/
 
 section#barraProgresso{
-    height: 25px;
+    height: 50px;
     border-radius: 10px;
     background-color: rgb(66, 241, 2);
-    border: 0px; 
+    border: 1px solid rgb(0, 200, 255); 
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
-    line-height: 25px;
+    line-height: 50px;
     font-size: 15px;
 
 }
