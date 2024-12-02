@@ -76,7 +76,7 @@ legend > img#imgCarlos{
 /**/
 
 section#barraProgresso{
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     background-color: rgb(66, 241, 2);
     border: 1px solid rgb(0, 200, 255); 
@@ -84,7 +84,7 @@ section#barraProgresso{
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     font-size: 15px;
 
 }
