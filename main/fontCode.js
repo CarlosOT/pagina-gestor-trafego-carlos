@@ -15,6 +15,7 @@ export function initialSetup(){
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
+    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + '! (<STRONG>OFERTA DO DIA</STRONG>) ');
 }
 
 export function initialValidation(){

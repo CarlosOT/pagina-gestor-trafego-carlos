@@ -75,11 +75,13 @@ legend > img#imgCarlos{
 }
 div#copyDate{
     background-color: #00bfff;
+    height: 40px;
+    line-height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom:5px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 /**/
@@ -174,6 +176,7 @@ div#avaliacoes{
     width: 600px;
     margin: auto;
     font-size: 15px;
+    color: rgba(255, 255, 255, 0.586);
 }
 div#avaliacoes > p{
     margin-top: 10px;
