@@ -14,6 +14,7 @@ export function initialSetup(){
     mg.setValue('botaoOk', getTxt.texts.botaoOk);
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
+    mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
 }
 
 export function initialValidation(){

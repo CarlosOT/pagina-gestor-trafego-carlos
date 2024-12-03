@@ -6,8 +6,15 @@ let progresso = 0;
 let largura = 0;
 let contador = 0;
 let linkWhatsApp = gt.texts.linkWhats;
+const date = new Date();
 
 //MÉTODOS
+
+/**
+ * return **date.getFullYear()**
+ * @returns 
+ */
+export function getDateYear(){return date.getFullYear()}
 
 /**
  * return **linkWhatsApp**
@@ -56,3 +63,4 @@ export function setLargura(value){largura += value}
  * @param {int} value 
  */
 export function incrementCounter(){contador++}
+
