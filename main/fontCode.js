@@ -15,7 +15,7 @@ export function initialSetup(){
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
-    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + ' Para Você! | Prossiga para <STRONG>LIBERAR OFERTA</STRONG> de Hoje');
+    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + '! Conheça o <strong>"MÉTODO G7"</strong> Que Vai Salvar as Suas <strong>VENDAS</strong>!');
 }
 
 export function initialValidation(){

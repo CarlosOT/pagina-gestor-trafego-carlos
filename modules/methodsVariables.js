@@ -20,11 +20,11 @@ const periodDay = date.getHours();
  */
 export function getGreetingsDay(){
     if(periodDay >= 6 && periodDay < 12){
-        return "<STRONG>BOM DIA</STRONG>,";
+        return "Bom Dia,";
     }else if(periodDay >= 12 && periodDay < 18){
-        return "<STRONG>BOA TARDE</STRONG>,";
+        return "Boa Tarde,";
     }else{
-        return "<STRONG>BOA NOITE</STRONG>,";
+        return "Boa Noite,";
     }
 }
 
