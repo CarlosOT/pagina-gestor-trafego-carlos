@@ -15,7 +15,7 @@ export function initialSetup(){
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
-    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + '! (<STRONG>OFERTA DO DIA</STRONG>) ');
+    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + ' Para Você! | Prossiga para <STRONG>LIBERAR OFERTA</STRONG> de Hoje');
 }
 
 export function initialValidation(){
@@ -26,11 +26,14 @@ export function initialValidation(){
     }
 }
 
-export function setReviews(){
+export function hideSome(){
     mg.hideElement('avaliacoes');
+    mg.hideElement('copyDate');
+    mg.hideElement('allFooter');
 }
 
 export function setHeadlines(){
+    mg.setMarginTop('body', '60px');
     $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
     mg.insertText('headline', getTxt.list.headlines[mv.getCounter()]);

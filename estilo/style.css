@@ -8,6 +8,7 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 label{
@@ -38,7 +39,7 @@ h1#tituloH1{
 
 h2{
     font-size: 35px;
-    color:rgb(0, 191, 255);
+    color:rgb(0, 208, 255);
     margin-bottom: 10px;
 }
 h2#tituloH2_1 > span#tituloGads_1{
@@ -74,14 +75,14 @@ legend > img#imgCarlos{
 
 }
 div#copyDate{
-    background-color: #00bfff;
-    height: 40px;
-    line-height: 40px;
+    background-color: #00bfffd2;
+    height: 30px;
+    line-height: 30px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom:5px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 /**/
@@ -168,8 +169,15 @@ div#botaoWhatsapp > a#linkWhatsWeb{
 }
 /**/
 a#linkFooter{
-    color:rgb(87, 87, 87);
+    color:rgba(255, 255, 255, 0.386);
     text-decoration: none;
+}
+#divFooter{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
 div#avaliacoes{
@@ -181,7 +189,7 @@ div#avaliacoes{
 div#avaliacoes > p{
     margin-top: 10px;
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 25px;
 }
 span#stars{
     color: rgb(255, 238, 0);
