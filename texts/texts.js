@@ -33,7 +33,7 @@ export let txtPh = {
 }
 //-----------------------------------------------------------------TEXTOS DE HEADLINE
 export let txtHead = {
-    head1: '<u>Preencha abaixo</u> as informações básicas que precisamos para fazer o seu negócio INVESTIR POUCO, aparecer no TOPO do GOOGLE e <span id="txtVenderMais">VENDER MAIS!</span>',
+    head1: '<u>Preencha abaixo</u> as informações básicas que precisamos para fazer o seu negócio INVESTIR POUCO, aparecer no TOPO DO GOOGLE e <span id="txtVenderMais">VENDER MAIS!</span>',
     head2: 'Já tem conta no Google Ads? Se sim, você acaba de GANHAR um DIAGNÓSTICO de conta GRÁTIS, continue para saber mais. Não tem conta? Nós te ajudamos a criar e configurar da forma certa!',
     head3: 'Para Garantir Resultados no Google, é obrigatório ter um site OTIMIZADO e um EXCELENTE Atendimento. Se você ainda não tem site ou precisa de melhorias, vamos te ajudar!',
     head4: 'Qual é o Principal Serviço que você deseja vender? Com base na sua resposta, nós vamos definir o orçamento semanal ideal da sua campanha e evitar gastos desnecessários!',
