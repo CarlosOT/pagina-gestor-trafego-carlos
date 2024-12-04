@@ -1,4 +1,11 @@
 @charset "UTF-8";
+
+:root{
+    --defaultBlue: #00bfff;
+    --defaultGreen: #42f102;
+}
+
+
 /*--------------------------------------inicio seletores globais sem filhos (id ou class)*/
 body{
     background-image: linear-gradient(to top,#000415 50%, #000000);
@@ -16,11 +23,11 @@ label{
 }
 
 u{
-    text-decoration: underline rgb(0, 191, 255);
+    text-decoration: underline var(--defaultBlue);
 }
 hr{
     width: 50px;
-    border-color: rgb(0, 191, 255);
+    border-color: var(--defaultBlue);
     margin-top: 30px;
 }
 
@@ -40,7 +47,7 @@ h1#tituloH1{
 
 h2{
     font-size: 35px;
-    color:rgb(0, 208, 255);
+    color: var(--defaultBlue);
     margin-bottom: 10px;
 }
 h2#tituloH2_1 > span#tituloGads_1{
@@ -51,7 +58,7 @@ h2#tituloH2_1 > span#tituloGads_1{
 }
 h2#tituloH2_2{
     margin-top: 10px;
-    color: rgb(66, 241, 2);
+    color: var(--defaultGreen);
 }
 /**/
 
@@ -59,9 +66,9 @@ fieldset#bordaPrincipal{
     margin: auto;
     width: 50%;
     height: 470px;
-    border-color: #00bfff;
+    border-color: var(--defaultBlue);
     border-radius: 10px;
-    box-shadow: 1px 1px 5px rgb(0, 191, 255);
+    box-shadow: 1px 1px 5px var(--defaultBlue);
 
 }
 /**/
@@ -69,14 +76,14 @@ fieldset#bordaPrincipal{
 legend > img#imgCarlos{
     width: 150px;
     border: 2px solid;
-    border-color: rgb(0, 191, 255);
+    border-color: var(--defaultBlue);
     border-radius: 100px;
     margin-top: 15px;
-    box-shadow: 1px 1px 8px rgb(0, 191, 255);
+    box-shadow: 1px 1px 8px var(--defaultBlue);
 
 }
 div#copyDate{
-    background-color: #00bfffd2;
+    background-color: var(--defaultGreen);
     height: 30px;
     line-height: 30px;
     padding-left: 10px;
@@ -91,8 +98,7 @@ div#copyDate{
 section#barraProgresso{
     height: 40px;
     border-radius: 10px;
-    background-color: rgb(66, 241, 2);
-    border: 1px solid rgb(0, 200, 255); 
+    background-color: var(--defaultGreen);
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -116,7 +122,7 @@ p#headline{
 
 }
 p#headline > span#txtVenderMais{
-    color: rgb(66, 241, 2);
+    color: var(--defaultGreen);
     font-weight: 600;
 
 }
@@ -135,11 +141,11 @@ input#inputPrincipal{
 }
 input#inputPrincipal:focus-within{
     border: solid 2px;
-    border-color: rgb(0, 191, 255);
+    border-color: var(--defaultBlue);
 
 }
 input#botaoOk{
-    background-color: rgb(66, 241, 2);
+    background-color: var(--defaultGreen);
     padding: 17px 30px 17px 30px;
     margin-left: 10px;
     border-radius: 10px;
@@ -164,7 +170,7 @@ div#botaoWhatsapp > a#linkWhatsWeb{
     border: 1px solid;
     border-radius: 20px;
     margin-left: 20px;
-    background-color: rgb(66, 241, 2);
+    background-color: var(--defaultGreen);
     font-size:30px;
 
 }
@@ -200,7 +206,7 @@ p#valueStars{
 }
 span#linkStar > a{
     /* color: rgb(255, 238, 0); */
-    color: rgb(0, 191, 255);
+    color: var(--defaultBlue);
     text-decoration: none;
 }
 div#conteinerStars{
