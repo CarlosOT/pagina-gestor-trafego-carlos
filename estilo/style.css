@@ -2,7 +2,7 @@
 
 :root{
     --defaultBlue: #00bfff;
-    --defaultGreen: #42f102;
+    --defaultGreen: #31b800;
 }
 
 
@@ -84,15 +84,16 @@ legend > img#imgCarlos{
 }
 div#copyDate{
     background-color: var(--defaultGreen);
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom:5px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
-}
+}   
+
 /**/
 
 section#barraProgresso{
@@ -196,7 +197,7 @@ div#avaliacoes{
 div#avaliacoes > p{
     margin-top: 10px;
     padding-top: 10px;
-    font-size: 25px;
+    font-size: 20px;
 }
 span#stars{
     color: rgb(255, 238, 0);

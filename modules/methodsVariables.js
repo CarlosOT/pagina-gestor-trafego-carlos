@@ -12,19 +12,35 @@ let semester2 = ['Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro
 let fullYear = [...semester1, ...semester2];
 const date = new Date();
 const periodDay = date.getHours();
+export let randomCopy = Math.floor(Math.random() * 2);
 
 //MÉTODOS
+/**
+ * retorna copy promocional de forma aleatória para testes
+ * @returns 
+ */
+export function getCopyPromo(){
+    switch(randomCopy){
+        case 0:
+            return gt.txtPromo.at(randomCopy);
+            break;
+        case 1:
+            return gt.txtPromo.at(randomCopy);
+            break;
+    }
+}
 
 /**
+ * retorna saudação de acordo com o período do dia
  * @returns 
  */
 export function getGreetingsDay(){
     if(periodDay >= 6 && periodDay < 12){
-        return "Bom Dia,";
+        return gt.texts.greetings.at(0).toUpperCase();
     }else if(periodDay >= 12 && periodDay < 18){
-        return "Boa Tarde,";
+        return gt.texts.greetings.at(1).toUpperCase();
     }else{
-        return "Boa Noite,";
+        return gt.texts.greetings.at(2).toUpperCase();
     }
 }
 
@@ -36,7 +52,7 @@ export function getNameMonth(){return fullYear.at(date.getMonth())}
 /**
  * @returns 
  */
-export function getNameDay(){return dayWeek.at(date.getDay())}
+export function getNameDay(){return ` Ótima ${dayWeek.at(date.getDay())} | `}
 
 /**
  * @returns 

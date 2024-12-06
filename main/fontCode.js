@@ -15,7 +15,7 @@ export function initialSetup(){
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
-    mg.insertHtml('currentDate', mv.getGreetingsDay() + ' Ótima ' +  mv.getNameDay() + '! Conheça o <strong>"MÉTODO GA7"</strong> Que Promete Gerar Mais <strong>VENDAS</strong> Para o Seu Negócio!');
+    mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
 }
 
 export function initialValidation(){
@@ -34,7 +34,7 @@ export function hideSome(){
 
 export function setHeadlines(){
     mg.setMarginTop('body', '60px');
-    $("#headline").hide().slideDown(2000);
+    // $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
     mg.insertText('headline', getTxt.list.headlines[mv.getCounter()]);
     mg.setFontSize('headline', '25px');
@@ -45,6 +45,8 @@ export function concatLink(){
     if (mv.getCounter() <= 4){
         getTxt.list.input.push(String(mg.getValue('inputPrincipal')).toUpperCase());
         mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getCounter()-1]}%20*${getTxt.list.input[mv.getCounter()-1]}*%20%0A`);
+    }else if(mv.getCounter() == 11){
+        mv.setLinkWhats(`Código da Oferta *@${Math.floor(Math.random() * 500) + 100}#${mv.randomCopy}*`);
     }else{mg.setValue('botaoOk', getTxt.texts.botaoCiente);}
 }
 
