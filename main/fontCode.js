@@ -2,6 +2,26 @@ import * as mg from "../modules/methodsGeneral.js"
 import * as getTxt from "../modules/getTexts.js"
 import * as mv from "../modules/methodsVariables.js"
 
+
+export function popup(){
+    const mainConteiner = document.getElementById('mainConteiner');
+    const exitPopup = document.getElementById('exit-popup');
+    const exitPopupClose = document.getElementById('exit-popup-close');
+
+    const hideMainConteiner = () => mainConteiner.style.display = 'none';
+    const hideExitPopup = () => exitPopup.style.display = "none";
+    const hideExitPopup2 = () => mainConteiner.style.display = 'block';
+    const showExitPopup = () => exitPopup.style.display = "block";
+    const setFocusInput = () => mg.setFocus('inputPrincipal');
+
+    document.addEventListener('mouseleave', hideMainConteiner);
+    document.addEventListener('mouseleave', showExitPopup);
+
+    exitPopupClose.addEventListener('click', hideExitPopup);
+    exitPopupClose.addEventListener('click', hideExitPopup2);
+    exitPopupClose.addEventListener('click', setFocusInput);
+}
+
 export function initialSetup(){
     mg.hideElement('botaoWhatsapp');
     mg.hideElement('barraProgresso');
@@ -22,7 +42,6 @@ export function initialSetup(){
 export function initialValidation(){
     if(mg.getLength('inputPrincipal') == 0){
         window.alert(getTxt.texts.empty);
-        mg.setFocus('inputPrincipal');
         return true;
     }
 }
@@ -34,7 +53,7 @@ export function hideSome(){
 }
 
 export function setHeadlines(){
-    mg.setMarginTop('body', '70px');
+    mg.setMarginTop('body', '60px');
     $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
     mg.insertText('headline', getTxt.list.headlines[mv.getCounter()]);
@@ -53,6 +72,7 @@ export function concatLink(){
 
 export function clearInput(){
     mg.setValue('inputPrincipal', '');
+    mg.setFocus('inputPrincipal');
 }
 
 export function progressBar(){

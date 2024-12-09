@@ -3,6 +3,7 @@ import * as getTxt from "../modules/getTexts.js"
 import * as mv from "../modules/methodsVariables.js"
 import * as fontCode from "../main/fontCode.js"
 
+fontCode.popup();
 fontCode.initialSetup(); // antes do botão ser clicado
 
 mg.addEventClick('botaoOk', execucao); // usuário clicou no botão

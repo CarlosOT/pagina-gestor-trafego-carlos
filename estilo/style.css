@@ -4,6 +4,10 @@
     --defaultBlue: #00bfff;
     --defaultGreen: #31b800;
     --defaultOrange: #e96900;
+    --defaultRed: #ff0000;
+}
+*{
+    box-sizing: border-box;
 }
 
 
@@ -66,7 +70,7 @@ h2#tituloH2_2{
 fieldset#bordaPrincipal{
     margin: auto;
     width: 50%;
-    height: 470px;
+    height: 485px;
     border-color: var(--defaultBlue);
     border-radius: 10px;
     box-shadow: 1px 1px 5px var(--defaultBlue);
@@ -89,7 +93,6 @@ div#copyDate{
     line-height: 40px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 5px;
     padding-bottom:5px;
     font-size: 20px;
     margin-bottom: 20px;
@@ -134,7 +137,7 @@ input#inputPrincipal{
     padding: 15px 40px 15px 40px;
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 300px;
+    width: 370px;
     background-color: rgb(45, 45, 45);
     border-radius: 5px;
     color: white;
@@ -153,6 +156,7 @@ input#botaoOk{
     border-radius: 10px;
     color: white;
     font-size: 15px;
+    cursor: pointer ;
 
 }
 ::placeholder{
@@ -219,6 +223,85 @@ span#linkStar > a:hover{
     color: rgb(255, 238, 0);
     /* color: rgb(0, 191, 255); */
 }
-/**/
 
+/**POPUP*/
+.exit-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.e-col-8{
+    flex-basis: 60%;
+    padding: 25px;
+}
+.e-col-4{
+    flex-basis: 40%;
+}
+#exit-popup{
+    display: none;
+    max-width: 900px;
+    min-width: 800px;
+    width: 900px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    border: 4px solid var(--defaultGreen);
+    box-shadow: 1px 1px 7px var(--defaultGreen);
+    overflow: hidden;
+}
+#exit-popup img{
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
 
+}
+#exit-popup h2{
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #000000ca;
+}
+#exit-popup p{
+    font-size: 1.6em;
+    color: #0000009c;
+    line-height: 1.3em;
+}
+#exit-popup-close{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 2.5em;
+    opacity: 0.45;
+}
+#exit-popup-close:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.exit-content{
+    max-width: 480px;
+    margin: auto;
+}
+.btn{
+    padding: 20px 25px;
+    border: none;
+    background-color: var(--defaultGreen);
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 30px;
+}
