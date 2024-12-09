@@ -15,8 +15,8 @@ const periodDay = date.getHours();
 
 //(ramdom) acessados globalmente para definir código da oferta no final da execução
 export let setRandom = Math.floor(Math.random() * 2); 
-export let randomCopy = Math.floor(Math.random() * 3); 
-export let randomCopyColor = Math.floor(Math.random() * 3);
+export let randomCopy = Math.floor(Math.random() * gt.txtPromo.length); 
+export let randomCopyColor = Math.floor(Math.random() * gt.colorPromo.length);
 
 //MÉTODOS
 
@@ -151,7 +151,7 @@ export function clearRandom(){
  */
 export function resetRandom(){
     setRandom = Math.floor(Math.random() * 2); 
-    randomCopy = Math.floor(Math.random() * 3); 
-    randomCopyColor = Math.floor(Math.random() * 3);
+    randomCopy = Math.floor(Math.random() * gt.txtPromo.length); 
+    randomCopyColor = Math.floor(Math.random() * gt.colorPromo.length);
 }
 
