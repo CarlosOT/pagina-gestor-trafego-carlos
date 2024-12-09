@@ -16,6 +16,7 @@ export function initialSetup(){
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
     mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
+    mg.setBgColor('copyDate',mv.setPromoColor());
 }
 
 export function initialValidation(){
@@ -29,12 +30,12 @@ export function initialValidation(){
 export function hideSome(){
     mg.hideElement('avaliacoes');
     mg.hideElement('copyDate');
-    mg.hideElement('allFooter');
+    // mg.hideElement('allFooter');
 }
 
 export function setHeadlines(){
-    mg.setMarginTop('body', '60px');
-    // $("#headline").hide().slideDown(2000);
+    mg.setMarginTop('body', '70px');
+    $("#headline").hide().slideDown(2000);
     mg.hideElement('tituloH2_1');
     mg.insertText('headline', getTxt.list.headlines[mv.getCounter()]);
     mg.setFontSize('headline', '25px');
@@ -46,7 +47,7 @@ export function concatLink(){
         getTxt.list.input.push(String(mg.getValue('inputPrincipal')).toUpperCase());
         mv.setLinkWhats(`${getTxt.list.paddingInput[mv.getCounter()-1]}%20*${getTxt.list.input[mv.getCounter()-1]}*%20%0A`);
     }else if(mv.getCounter() == 11){
-        mv.setLinkWhats(`Código da Oferta *@${Math.floor(Math.random() * 500) + 100}#${mv.randomCopy}*`);
+        mv.setLinkWhats(`Código da Oferta *@${Math.floor(Math.random() * 500) + 100}#cp${mv.randomCopy}#cl${mv.randomCopyColor}*`);
     }else{mg.setValue('botaoOk', getTxt.texts.botaoCiente);}
 }
 

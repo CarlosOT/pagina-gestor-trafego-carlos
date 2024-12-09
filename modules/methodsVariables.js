@@ -12,9 +12,13 @@ let semester2 = ['Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro
 let fullYear = [...semester1, ...semester2];
 const date = new Date();
 const periodDay = date.getHours();
-export let randomCopy = Math.floor(Math.random() * 2);
+
+//(ramdom) acessados globalmente para definir código da oferta no final da execução
+export let randomCopy = Math.floor(Math.random() * 3); 
+export let randomCopyColor = Math.floor(Math.random() * 3);
 
 //MÉTODOS
+
 /**
  * retorna copy promocional de forma aleatória para testes
  * @returns 
@@ -25,6 +29,9 @@ export function getCopyPromo(){
             return gt.txtPromo.at(randomCopy);
             break;
         case 1:
+            return gt.txtPromo.at(randomCopy);
+            break;
+        case 2:
             return gt.txtPromo.at(randomCopy);
             break;
     }
@@ -52,7 +59,9 @@ export function getNameMonth(){return fullYear.at(date.getMonth())}
 /**
  * @returns 
  */
-export function getNameDay(){return ` Ótima ${dayWeek.at(date.getDay())} | `}
+export function getNameDay(){return ` Ótima ${dayWeek.at(date.getDay())} | 
+
+`}
 
 /**
  * @returns 
@@ -83,6 +92,8 @@ export function getLargura(){return largura}
  */
 export function getCounter(){return contador}
 
+
+
 /**
  * linkWhatsApp += **value**
  * @param {string} value 
@@ -106,4 +117,22 @@ export function setLargura(value){largura += value}
  * @param {int} value 
  */
 export function incrementCounter(){contador++}
+
+/**
+ * retorna cor de fundo da faixa do topo da página
+ * @returns 
+ */
+export function setPromoColor(){
+    switch(randomCopyColor){
+        case 0:
+            return gt.colorPromo.at(randomCopyColor);
+            break;
+        case 1:
+            return gt.colorPromo.at(randomCopyColor);
+            break;
+        case 2:
+            return gt.colorPromo.at(randomCopyColor);
+            break;
+    }
+}
 

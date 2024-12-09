@@ -1,6 +1,15 @@
+
+export let colorPromo = [
+    'var(--defaultBlue)',
+    'var(--defaultGreen)', 
+    'var(--defaultOrange)',
+]
+
+
 export let txtPromo = [
-    '<strong>90% DOS DONOS DE EMPRESAS</strong> Ainda Não Sabem Usar o <strong>GOOGLE ADS</strong>!',
-    'Receba <strong>TODOS OS DIAS</strong> Contatos de Possíveis <strong>CLIENTES</strong> Direto no Whatsapp!',
+    'Sabia que <strong>90% DOS EMPRESÁRIOS</strong> Não Sabem Vender no GOOGLE?!',
+    'Saiba Como Receber Contatos <strong>TODOS OS DIAS</strong> Direto no Whatsapp!',
+    'Saiba Como Ter <strong>RESULTADOS REAIS</strong> Usando o GOOGLE ADS!'
 ]
 
 
