@@ -14,6 +14,7 @@ const date = new Date();
 const periodDay = date.getHours();
 
 //(ramdom) acessados globalmente para definir código da oferta no final da execução
+export let setRandom = Math.floor(Math.random() * 2); 
 export let randomCopy = Math.floor(Math.random() * 3); 
 export let randomCopyColor = Math.floor(Math.random() * 3);
 
@@ -134,5 +135,23 @@ export function setPromoColor(){
             return gt.colorPromo.at(randomCopyColor);
             break;
     }
+}
+
+/**
+ * limpa o valor do random quando a página não mostra a copy promocional (usado para definir o código da oferta no final)
+ */
+export function clearRandom(){
+    randomCopy = '';
+    randomCopyColor = '';
+    setRandom = '';
+}
+
+/**
+ * reseta o random para ser usado de novo
+ */
+export function resetRandom(){
+    setRandom = Math.floor(Math.random() * 2); 
+    randomCopy = Math.floor(Math.random() * 3); 
+    randomCopyColor = Math.floor(Math.random() * 3);
 }
 

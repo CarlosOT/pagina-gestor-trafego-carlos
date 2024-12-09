@@ -18,7 +18,7 @@ function execucao(){
         fontCode.clearInput();
         fontCode.progressBar();
         fontCode.inputPlaceHolder();
-        fontCode.buttonFadeIn();
+        // fontCode.buttonFadeIn();
 
     }else{fontCode.finalScreen();}
 }

@@ -7,7 +7,7 @@ export let colorPromo = [
 
 
 export let txtPromo = [
-    'Sabia que <strong>90% DOS EMPRESÁRIOS</strong> Não Sabem Vender no GOOGLE?!',
+    'Saiba Como Fazer a Sua Empresa <strong>VENDER MAIS</strong> no Google!',
     'Saiba Como Receber Contatos <strong>TODOS OS DIAS</strong> Direto no Whatsapp!',
     'Saiba Como Ter <strong>RESULTADOS REAIS</strong> Usando o GOOGLE ADS!'
 ]

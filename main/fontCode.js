@@ -35,8 +35,16 @@ export function initialSetup(){
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
-    mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
-    mg.setBgColor('copyDate',mv.setPromoColor());
+    if(mv.setRandom == 0){
+        mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
+        mg.setBgColor('copyDate',mv.setPromoColor());
+        mv.resetRandom();
+    }else if(mv.setRandom == 1){
+        mg.setMarginTop('body', '60px');
+        mg.hideElement('copyDate');
+        mv.clearRandom();
+    }
+
 }
 
 export function initialValidation(){
