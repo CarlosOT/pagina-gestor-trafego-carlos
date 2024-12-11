@@ -60,9 +60,7 @@ export function getNameMonth(){return fullYear.at(date.getMonth())}
 /**
  * @returns 
  */
-export function getNameDay(){return ` Ótima ${dayWeek.at(date.getDay())} | 
-
-`}
+export function getNameDay(){return ` Ótima ${dayWeek.at(date.getDay())}! `}
 
 /**
  * @returns 

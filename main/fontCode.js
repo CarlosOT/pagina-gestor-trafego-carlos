@@ -34,9 +34,13 @@ export function initialSetup(){
     mg.setValue('botaoOk', getTxt.texts.botaoOk);
     mg.insertHtml('linkWhatsWeb', getTxt.texts.botaoWhats);
     mg.setFocus('inputPrincipal');
+    mg.insertHtml('legend2', mv.getGreetingsDay() + ',' + mv.getNameDay());
+    mg.insertHtml('textFieldset2', getTxt.texts.textFieldset2);
+    mg.insertHtml('apendiceFieldset2', getTxt.texts.apendiceFieldset2);
     mg.insertHtml('dateFooter', '2017-' + mv.getDateYear());
     if(mv.setRandom == 0){
-        mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
+        // mg.insertHtml('currentDate', mv.getGreetingsDay() +  mv.getNameDay() + mv.getCopyPromo());
+        mg.insertHtml('currentDate', mv.getCopyPromo());
         mg.setBgColor('copyDate',mv.setPromoColor());
         mv.resetRandom();
     }else if(mv.setRandom == 1){
@@ -50,12 +54,12 @@ export function initialSetup(){
 export function initialValidation(){
     if(mg.getLength('inputPrincipal') == 0){
         window.alert(getTxt.texts.empty);
+        mg.setFocus('inputPrincipal');
         return true;
     }
 }
 
 export function hideSome(){
-    mg.hideElement('avaliacoes');
     mg.hideElement('copyDate');
     // mg.hideElement('allFooter');
 }
@@ -121,6 +125,6 @@ export function finalScreen(){
     mg.setHref('linkWhatsWeb', mv.getLinkWhats());
     mg.setBorderColor('bordaPrincipal', "rgb(66, 241, 2)");
     mg.setBoxShadow('bordaPrincipal', '1px 1px 5px #42f102');
-    mg.setBorderColor('imgCarlos', 'rgb(66, 241, 2)');
-    mg.setBoxShadow('imgCarlos', '1px 1px 8px #42f102');
+    mg.setBorderColor('legend1', 'rgb(66, 241, 2)');
+    mg.setBoxShadow('legend1', '1px 1px 8px #42f102');
 }

@@ -5,53 +5,40 @@
     --defaultGreen: #31b800;
     --defaultOrange: #e96900;
     --defaultRed: #ff0000;
+    --defaultGray: #ffffffa1;
 }
+
 *{
     box-sizing: border-box;
 }
 
-
-/*--------------------------------------inicio seletores globais sem filhos (id ou class)*/
 body{
     background-image: linear-gradient(to top,#000415 50%, #000000);
     background-attachment: fixed;
     color: white;
     text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0px;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
-}
-
-label{
-    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
 u{
     text-decoration: underline var(--defaultBlue);
 }
-hr{
-    width: 50px;
-    border-color: var(--defaultBlue);
-    margin-top: 30px;
-}
-
-/*--------------------------------------fim seletores globais sem filhos (id ou class)*/
-
-
-/*-----------------------------------inicio seletores globais com filhos (id ou class)*/
 
 h1#tituloH1{
-    font-size: 17px;
+    font-size: 15px;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 3px;
     font-weight: 100;
-    color: rgba(255, 255, 255, 0.603);  
+    color: var(--defaultGray);
 }
-/**/
 
 h2{
-    font-size: 35px;
+    font-size: 38px;
     color: var(--defaultBlue);
     margin-bottom: 10px;
 }
@@ -65,20 +52,48 @@ h2#tituloH2_2{
     margin-top: 10px;
     color: var(--defaultGreen);
 }
-/**/
 
 fieldset#bordaPrincipal{
-    margin: auto;
     width: 50%;
-    height: 485px;
+    margin-left: auto;
+    height: 490px;
     border-color: var(--defaultBlue);
     border-radius: 10px;
     box-shadow: 1px 1px 5px var(--defaultBlue);
-
 }
-/**/
 
-legend > img#imgCarlos{
+fieldset#bordaPrincipal2{
+    border-color: var(--defaultBlue);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--defaultBlue);
+    margin-top: 55px;
+    margin-right: 20px;
+    margin-left: 14%;
+    height: 435px;
+    width: 20%;
+    font-size: 17px;
+    line-height: 1.3em;
+}
+
+p#apendiceFieldset2{
+    font-size: 14px;
+    margin-top: 25px;
+    text-align: left;
+    color: var(--defaultGray);
+}
+
+fieldset#bordaPrincipal2{
+    text-align: justify;
+    padding: 10px 20px 20px 20px;
+    font-weight: 100;
+}
+
+ div > fieldset{
+    margin-left: 15%;
+    float: left;
+ }
+
+legend > img#legend1{
     width: 150px;
     border: 2px solid;
     border-color: var(--defaultBlue);
@@ -87,6 +102,19 @@ legend > img#imgCarlos{
     box-shadow: 1px 1px 8px var(--defaultBlue);
 
 }
+
+legend > #legend2{
+    width: 300px;
+    border: 10px solid;
+    border-color: var(--defaultBlue);
+    border-radius: 10px;
+    background-color: var(--defaultBlue);
+    box-shadow: 1px 1px 5px var(--defaultBlue);
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 div#copyDate{
     background-color: var(--defaultGreen);
     height: 40px;
@@ -97,8 +125,6 @@ div#copyDate{
     font-size: 20px;
     margin-bottom: 20px;
 }   
-
-/**/
 
 section#barraProgresso{
     height: 40px;
@@ -112,11 +138,11 @@ section#barraProgresso{
     font-size: 15px;
 
 }
-/**/
 
 p{
     margin-bottom: 5px;
 }
+
 p#headline{ 
     text-align: center;
     width: 680px;
@@ -126,29 +152,31 @@ p#headline{
     font-size: 28px;
 
 }
+
 p#headline > span#txtVenderMais{
     color: var(--defaultGreen);
     font-weight: 600;
 
 }
-/**/
 
 input#inputPrincipal{
     padding: 15px 40px 15px 40px;
     margin-top: 10px;
     margin-bottom: 20px;
     width: 370px;
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(54, 54, 54);
     border-radius: 5px;
     color: white;
     font-size: 20px;
     outline: none;
 }
+
 input#inputPrincipal:focus-within{
     border: solid 2px;
     border-color: var(--defaultBlue);
 
 }
+
 input#botaoOk{
     background-color: var(--defaultGreen);
     padding: 17px 30px 17px 30px;
@@ -159,16 +187,17 @@ input#botaoOk{
     cursor: pointer ;
 
 }
+
 ::placeholder{
     color: white;
     font-size: 15px;
 }
-/**/
 
 div#botaoWhatsapp{
     padding: 30px 0px 30px 0px;
     
 }
+
 div#botaoWhatsapp > a#linkWhatsWeb{
     color: white;
     text-decoration: none;
@@ -180,45 +209,52 @@ div#botaoWhatsapp > a#linkWhatsWeb{
     font-size:30px;
 
 }
-/**/
+
 a#linkFooter{
-    color:rgba(255, 255, 255, 0.386);
+    color: var(--defaultGray);
     text-decoration: none;
 }
+
 #divFooter{
     position: fixed;
     bottom: 0px;
     width: 100%;
+    margin: auto;
     margin-bottom: 15px;
     font-size: 16px;
 }
 
 div#avaliacoes{
-    width: 600px;
-    margin: auto;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.586);
+    color: var(--defaultGray);
+    margin-bottom: 30px;
 }
+
 div#avaliacoes > p{
     margin-top: 10px;
     padding-top: 10px;
     font-size: 20px;
 }
+
 span#stars{
     color: rgb(255, 238, 0);
 }
+
 p#valueStars{
     display: inline-block;
 }
+
 span#linkStar > a{
     /* color: rgb(255, 238, 0); */
     color: var(--defaultBlue);
     text-decoration: none;
 }
+
 div#conteinerStars{
     margin-top: -10px;
     margin-bottom: -15px;
 }
+
 span#linkStar > a:hover{
     color: rgb(255, 238, 0);
     /* color: rgb(0, 191, 255); */
@@ -229,13 +265,16 @@ span#linkStar > a:hover{
     display: flex;
     flex-wrap: wrap;
 }
+
 .e-col-8{
     flex-basis: 60%;
     padding: 25px;
 }
+
 .e-col-4{
     flex-basis: 40%;
 }
+
 #exit-popup{
     display: none;
     max-width: 900px;
@@ -252,6 +291,7 @@ span#linkStar > a:hover{
     box-shadow: 1px 1px 7px var(--defaultGreen);
     overflow: hidden;
 }
+
 #exit-popup img{
     max-width: 100%;
     display: block;
@@ -261,6 +301,7 @@ span#linkStar > a:hover{
     object-fit: cover;
 
 }
+
 #exit-popup h2{
     font-size: 3em;
     margin-top: 20px;
@@ -268,11 +309,13 @@ span#linkStar > a:hover{
     font-weight: 700;
     color: #000000ca;
 }
+
 #exit-popup p{
     font-size: 1.6em;
     color: #0000009c;
     line-height: 1.3em;
 }
+
 #exit-popup-close{
     background-color: transparent;
     border: none;
@@ -282,14 +325,17 @@ span#linkStar > a:hover{
     font-size: 2.5em;
     opacity: 0.45;
 }
+
 #exit-popup-close:hover{
     opacity: 1;
     cursor: pointer;
 }
+
 .exit-content{
     max-width: 480px;
     margin: auto;
 }
+
 .btn{
     padding: 20px 25px;
     border: none;

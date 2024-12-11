@@ -1,4 +1,6 @@
 
+
+
 export let colorPromo = [
     'var(--defaultBlue)',
     'var(--defaultGreen)', 
@@ -7,22 +9,24 @@ export let colorPromo = [
 
 
 export let txtPromo = [
-    'Saiba Como Fazer a Sua Empresa <strong>VENDER MAIS</strong> no Google!',
-    'Saiba Como Receber Contatos <strong>TODOS OS DIAS</strong> Direto no Whatsapp!',
-    'Saiba Como Ter <strong>RESULTADOS REAIS</strong> Usando o GOOGLE ADS!'
+    'Saiba Como Fazer a Sua Empresa <strong>VENDER MAIS SERVIÇOS</strong> no Google!',
+    'Saiba Como Receber Contatos de <strong>PESSOAS INTERESSADAS</strong> Nos Seus Serviços Direto no Whatsapp!',
+    'Saiba Como Ter <strong>RESULTADOS REAIS</strong> Vendendo Serviços Usando o GOOGLE ADS!'
 ]
 
 
 export let texts = {
     botaoOk: 'PRÓXIMO',
     tituloH2_2: 'OFERTA LIBERADA!',
-    tituloH2_1: 'Descubra o PODER do <span id="tituloGads_1">GOOGLE ADS!</span>',
-    tituloH1: 'Carlos Teixeira / Diretor Geral e Especialista em Google da Congard Digital Performance',
+    tituloH2_1: 'DESCUBRA O PODER DO <span id="tituloGads_1">GOOGLE ADS!</span>',
+    tituloH1: '', // 'Carlos Teixeira / Diretor Geral e Especialista em Google da Congard Digital Performance'
     empty: 'VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER',
     botaoCiente: 'ESTOU CIENTE',
     linkWhats: 'https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A',
     botaoWhats: '(11)96825-5910 &bull; Whatsapp Web',
-    greetings: ['Bom Dia,', 'Boa Tarde,', 'Boa Noite,']
+    greetings: ['Bom Dia', 'Boa Tarde', 'Boa Noite'],
+    textFieldset2: '<strong>TODO MUNDO PRECISA VENDER!</strong><br>Para Vender no Digital Saber Usar o <strong>GOOGLE ADS</strong> é Fundamental. Você Deseja Melhorar Seus Resultados no Google ou Ainda Não Faz Publicidade Por Lá? Então Fale Conosco, Você Está no Lugar Certo. Nós Temos o <strong>MÉTODO</strong> Que Vai Colocar a Sua Empresa no <strong>RUMO CERTO</strong>!',
+    apendiceFieldset2: 'Carlos Teixeira é Especialista em Google Ads e Co-fundador da Congard Digital Performance. Atua Desde 2017 No Mundo Digital e Sua Empresa Hoje é Nota Máximo no Google.'
 }
 
 export let list = {
