@@ -41,6 +41,7 @@ h2{
     font-size: 38px;
     color: var(--defaultBlue);
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 h2#tituloH2_1 > span#tituloGads_1{
     border: 1px solid;
@@ -76,7 +77,7 @@ fieldset#bordaPrincipal2{
 }
 
 p#apendiceFieldset2{
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 25px;
     text-align: left;
     color: var(--defaultGray);
