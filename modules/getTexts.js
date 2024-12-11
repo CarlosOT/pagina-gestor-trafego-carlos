@@ -26,7 +26,7 @@ export let texts = {
     botaoWhats: '(11)96825-5910 &bull; Whatsapp Web',
     greetings: ['Bom Dia', 'Boa Tarde', 'Boa Noite'],
     textFieldset2: '<strong>TODO MUNDO PRECISA VENDER!</strong><br><br>Para Vender no Digital Saber Usar o <strong>GOOGLE ADS</strong> é Fundamental. Você Deseja Melhorar Seus Resultados no Google ou Ainda Não Faz Publicidade Por Lá? Então Fale Conosco, Você Está no Lugar Certo. Nós Temos o <strong><u>MÉTODO</u></strong> Que Vai Colocar a Sua Empresa no <strong><u>RUMO CERTO</u></strong>!',
-    apendiceFieldset2: '<strong>Carlos Teixeira</strong> é Especialista em Google Ads e Co-fundador da Congard Digital Performance. Atua Desde 2017 No Mundo Digital e Sua Empresa Hoje é Nota Máximo no Google.'
+    apendiceFieldset2: '<strong>Carlos Teixeira</strong> é Especialista em Google Ads e Co-fundador da <strong>Congard Digital Performance</strong>. Atua Desde 2017 No Mundo Digital e Sua Empresa Hoje é Nota Máximo no Google.'
 }
 
 export let list = {
