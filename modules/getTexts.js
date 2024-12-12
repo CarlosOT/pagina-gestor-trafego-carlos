@@ -21,6 +21,7 @@ export let texts = {
     empty: 'VOCÊ NÃO RESPONDEU, VOLTE PARA RESPONDER',
     botaoCiente: 'ESTOU CIENTE',
     linkWhats: 'https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20segue%20abaixo%20os%20dados%20que%20preenchi%20no%20site,%20aguardo%20seu%20retorno!%0A%0A',
+    linkWhats2: 'https://web.whatsapp.com/send?phone=5511968255910&text=Ol%C3%A1%20Carlos,%20tudo%20bem?%20Estou%20precisando%20contratar%20um%20gestor%20de%20tr%C3%A1fego%20para%20a%20minha%20empresa,%20eu%20acabei%20n%C3%A3o%20preenchendo%20todo%20question%C3%A1rio%20do%20site,%20mas%20aguardo%20seu%20retorno%20para%20negociarmos%20alguma%20coisa!',
     botaoWhats: '(11)96825-5910 &bull; Whatsapp Web',
     greetings: ['Bom Dia,', 'Boa Tarde,', 'Boa Noite,']
 }
@@ -61,7 +62,7 @@ export let list = {
         '(3) Seu atendimento deve ser EXCELENTE. Ofereça sempre o melhor atendimento, isso aumentará muito sua taxa de vendas das pessoas que chegarão no seu Whatsapp através do Google.',
         '(4) Seu Whatsapp deve ser COMERCIAL. Evite usar seu contato pessoal para atender as pessoas que chegarão pelo Google. Ter um Whatsapp Comercial passará confiança e credibilidade.',
         '(5) Preencha todos os dados do PERFIL do seu Whatsapp Comercial. Vá em configurações no seu Whatsapp e mantenha preenchidos os dados da sua empresa.',
-        '(6) Vocé é FUNDAMENTAL. Precisamos da sua colaboração para dar certo. Contamos com a sua disponibilidade para nos fornecer as informações que possamos precisar ao longo do trabalho.',
+        '(6) Você é FUNDAMENTAL. Precisamos da sua colaboração para dar certo. Contamos com a sua disponibilidade para nos fornecer as informações que possamos precisar ao longo do trabalho.',
         '(7) Fazer a sua empresa vender com CONSISTÊNCIA pode levar até 3 meses. Você verá resultados logo nos primeiros 15 dias, porém o processo de otimização do Google Ads é CONTÍNUO.',
     ],
 
