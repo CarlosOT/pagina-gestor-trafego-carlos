@@ -50,6 +50,7 @@ export function initialSetup(){
 export function initialValidation(){
     if(mg.getLength('inputPrincipal') == 0){
         window.alert(getTxt.texts.empty);
+        mg.setFocus('inputPrincipal');
         return true;
     }
 }

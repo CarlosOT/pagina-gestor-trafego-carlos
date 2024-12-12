@@ -62,7 +62,7 @@ export let list = {
         '(3) Seu atendimento deve ser EXCELENTE. Ofereça sempre o melhor atendimento, isso aumentará muito sua taxa de vendas das pessoas que chegarão no seu Whatsapp através do Google.',
         '(4) Seu Whatsapp deve ser COMERCIAL. Evite usar seu contato pessoal para atender as pessoas que chegarão pelo Google. Ter um Whatsapp Comercial passará confiança e credibilidade.',
         '(5) Preencha todos os dados do PERFIL do seu Whatsapp Comercial. Vá em configurações no seu Whatsapp e mantenha preenchidos os dados da sua empresa.',
-        '(6) Vocé é FUNDAMENTAL. Precisamos da sua colaboração para dar certo. Contamos com a sua disponibilidade para nos fornecer as informações que possamos precisar ao longo do trabalho.',
+        '(6) Você é FUNDAMENTAL. Precisamos da sua colaboração para dar certo. Contamos com a sua disponibilidade para nos fornecer as informações que possamos precisar ao longo do trabalho.',
         '(7) Fazer a sua empresa vender com CONSISTÊNCIA pode levar até 3 meses. Você verá resultados logo nos primeiros 15 dias, porém o processo de otimização do Google Ads é CONTÍNUO.',
     ],
 
